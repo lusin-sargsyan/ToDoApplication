@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.home_page.HomeFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/space_60"
+        android:text="@string/to_do_heading"
+        android:textColor="@color/purple_200"
+        android:textSize="@dimen/size_30"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintStart_toStartOf="@id/guideLineBegin"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etTitle"
+        android:layout_width="@dimen/space_200"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/space_20"
+        android:background="@drawable/shape_edit_text"
+        android:hint="@string/your_to_do_title"
+        android:padding="@dimen/space_10"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintStart_toStartOf="@id/guideLineBegin"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/space_20"
+        android:background="@drawable/shape_btn"
+        android:paddingHorizontal="@dimen/space_20"
+        android:paddingVertical="@dimen/space_5"
+        android:text="@string/done"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintStart_toStartOf="@id/guideLineBegin"
+        app:layout_constraintTop_toBottomOf="@id/etTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTitles"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="@dimen/space_0"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintStart_toStartOf="@id/guideLineBegin"
+        app:layout_constraintTop_toBottomOf="@id/btnDone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/space_40"
+        tools:listitem="@layout/item_titles_list"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineBegin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/space_40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/space_40" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

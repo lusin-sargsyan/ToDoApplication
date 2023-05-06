@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/todoText"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_20"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/size_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/checkbox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="My todo" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_200"
+        android:buttonTint="@color/purple_200"
+        app:layout_constraintBottom_toBottomOf="@id/todoText"
+        app:layout_constraintEnd_toStartOf="@id/icTodoEdit"
+        app:layout_constraintTop_toTopOf="@id/todoText" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icTodoEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_20"
+        app:layout_constraintBottom_toBottomOf="@id/todoText"
+        app:layout_constraintEnd_toStartOf="@id/icTodoDelete"
+        app:layout_constraintTop_toTopOf="@id/todoText"
+        app:srcCompat="@drawable/ic_edit" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icTodoDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_20"
+        app:layout_constraintBottom_toBottomOf="@id/todoText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/todoText"
+        app:srcCompat="@drawable/ic_delete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
